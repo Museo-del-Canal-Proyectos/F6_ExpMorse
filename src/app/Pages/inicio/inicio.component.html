@@ -1,0 +1,62 @@
+<div class="pantalla">
+  <div class="texto" *ngIf="!mostrarVideo">
+    <h1 style="font-weight: 800">
+      ESCRIBE LA CLAVE CORRECTA PARA ACTIVAR LA DETONACIÓN
+    </h1>
+    <p class="mensaje">{{ letras.join("") }}</p>
+
+    <br /><br /><br />
+    <div class="morse-guide">
+      <h3>GUÍA DE CÓDIGO MORSE</h3>
+      <div class="morse-grid">
+        <div class="morse-item" *ngFor="let item of morseGuia">
+          <span class="letra">{{ item.letra }}</span>
+          <span class="codigo">{{ item.codigo }}</span>
+        </div>
+     
+      </div>
+     
+    </div>
+    <br>
+      <div class="container text-center">
+  <div class="row" style="font-weight: 800;">
+    <div class="col">
+        DINAMITA
+    </div>
+    <div class="col">
+      MIRAFLORES
+    </div>
+    <div class="col">
+       GAMBOA
+    </div>
+    <div class="col">
+      PANAMA
+    </div>
+    <div class="col">
+      CANAL
+    </div>
+  </div>
+</div>
+  </div>
+
+ 
+
+  <!-- Video a pantalla completa -->
+  <!-- Modal de video fullscreen -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0 m-0 overflow-hidden">
+          <video
+            #videoElement
+            [src]="videoUrl"
+            muted
+            playsinline
+            (ended)="onVideoEndedModal()"
+            class="w-100 h-100 object-fit-cover"
+          ></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
