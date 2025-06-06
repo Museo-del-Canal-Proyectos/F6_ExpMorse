@@ -20,6 +20,12 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
+
+# Ignorar videos grandes
+public/Videos/000.mp4
+public/Videos/062.mov
+
+
 # Visual Studio Code
 .vscode/*
 !.vscode/settings.json
